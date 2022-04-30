@@ -1,28 +1,52 @@
 # FleetManagement
 
-Web based Fleet management system with micro front end implementation using Webpack's Module Federatin plugin.
+Web based Fleet management system with micro front end implementation using Webpack's Module Federatin plugin together with the Angular CLI.
 
-## Add your files
+## Part 1: Install Node.js, npm and Angular CLI
 
-```
-cd existing_repo
-git remote add origin https://github.com/himakshi-aggarwal/FleetManagement.git
-git branch -M main
-git push -uf origin main
-```
-## Running the project
+1. To install Node.js for Windows, you can download the installer from https://nodejs.org/en/ and run the installer.
+   
+   Follow the prompts to select an install path and ensure the npm package manager feature is included along with the Node.js runtime. This should be the default      configuration. Restart your system once the installation is complete.
+   
+   If you installed under the default configuration, Node.js should now be added to your PATH. Run command prompt or powershell and input the following to test it:
+   
+   ```
+   node -v
+   ```
+   The console should respond with a version string. Repeat the process for npm:
+   
+   ```
+   npm -v
+   ```
+   
+   If both commands work, your installation was a success, and you can start using Node.js!
+   
+2. To install the Angular CLI, open a terminal window and run the following command:
 
-```
-Once the project is cloned, install the project dependencies using npm: 
-  run the command- npm install
-  
-Once the dependencies are installed, you need to run all the micro front end apps individually.
-  Run Micro Frontend 1
-    ng serve dashboard -o
-  Run Micro Frontend 2
-    ng serve fleet -o
-  Run Micro Frontend 3
-    ng serve analytics -o
-  Run the shell
-    ng serve shell -o
- ```  
+   ```
+   npm install -g @angular/cli
+   ```
+   
+   You can run the following command to check the angular version installed.
+   
+   ```
+   ng --version
+   ```
+
+## Part 2: Clone and Inspect the Project
+
+In this part you will clone the project and inspect the various micro front end applications.
+
+1. Clone the projects:
+
+    ```
+    git clone https://github.com/himakshi-aggarwal/FleetManagement.git
+    ```
+
+2. Move into the project directory and install the dependencies **with npm**:
+
+    ```
+    cd FleetManagement
+    npm i
+    ```
+    
