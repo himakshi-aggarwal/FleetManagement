@@ -49,4 +49,17 @@ In this part you will clone the project and inspect the various micro front end 
     cd FleetManagement
     npm i
     ```
+  
+3. Start the ``shell`` using the following command:
+
+    ```
+    ng serve shell -o
+    ```
+
+4. Do the same for the microfrontends. In this project we have three microfronts namely,   ``Dashboard`` (Microfrontend 1) , ``Fleet`` (Microfrontend 2), ``Analytics`` (Microfrontend 3). You can start it with the following commands:
+  
+  ```ng serve dashboard -o```
+  ```ng serve fleet -o```
+  ```ng serve analytics -o```
+
     
