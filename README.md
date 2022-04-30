@@ -56,10 +56,17 @@ In this part you will clone the project and inspect the various micro front end 
     ng serve shell -o
     ```
 
-4. Do the same for the microfrontends. In this project we have three microfronts namely,   ``Dashboard`` (Microfrontend 1) , ``Fleet`` (Microfrontend 2), ``Analytics`` (Microfrontend 3). You can start it with the following commands:
+4. Do the same for the microfrontends. In this project we have three microfronts namely,   ``Dashboard`` (Microfrontend 1) , ``Fleet`` (Microfrontend 2), ``Analytics`` (Microfrontend 3). 
+
+  You can start the apps with the following commands:
+  
+  ```
   
   ```ng serve dashboard -o```
+  
   ```ng serve fleet -o```
+  
   ```ng serve analytics -o```
-
+  
+  ```
     
