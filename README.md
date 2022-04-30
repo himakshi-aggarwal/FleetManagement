@@ -1,6 +1,6 @@
 # FleetManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Web based Fleet management system with micro front end implementation using Webpack's Module Federatin plugin.
 
 ## Development server
 
