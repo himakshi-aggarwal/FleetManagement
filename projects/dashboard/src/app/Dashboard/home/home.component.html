@@ -1,0 +1,16 @@
+<div>
+  <div style="display: flex;flex-direction: column;width: 40%;">
+    <div style="font-size: 25px;padding: 10px;">
+      Active Vehicles
+    </div>
+    <div>
+      <mat-tab-group (selectedTabChange)="tabChanged($event)" animationDuration="0ms">
+        <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+            <div style="cursor: pointer;" (click)="getVehicleDetail()" *ngFor="let vehicle of selectedVehicles">
+                <app-vehicle-card [activeVehicles]="vehicle" ></app-vehicle-card>
+            </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

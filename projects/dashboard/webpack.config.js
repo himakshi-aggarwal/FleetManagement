@@ -29,11 +29,12 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        // name: "dashboard",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/dashboard/src/app/app.component.ts',
-        // },        
+        name: "dashboard",
+        filename: "remoteEntry.js",
+        exposes: {
+            './Module': './projects/dashboard/src/app/Dashboard/dashbord.module.ts',
+            './Component': './projects/dashboard/src/app/app.component.ts',
+        },        
         
         // For hosts (please adjust)
         // remotes: {

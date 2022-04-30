@@ -1,0 +1,18 @@
+<div
+  style="display: flex;justify-content: space-around;height: 5em;padding-top: 20px; border: 1px #bbb6b6 solid; border-radius:5px; margin: 10px;">
+  <div>
+    <img height="45" alt="" width="45" [src]="activeVehicles.vehicleImagePath">
+  </div>
+  <div style="display: flex;flex-direction: column;align-content: space-between;">
+    <div style="font-size: 20px;">{{activeVehicles.vehicleNumber}}</div>
+    <div>{{activeVehicles.vehicleDate}}</div>
+  </div>
+  <div>
+    <div style="padding-top: 0.7em;">
+      <button class="btn bg-transparent" style="width: 5em;
+      padding: 4px;">
+        <fa-icon [icon]="faPaperPlane"></fa-icon>
+      </button>
+    </div>
+  </div>
+</div>
