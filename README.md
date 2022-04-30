@@ -12,6 +12,7 @@ git push -uf origin main
 ```
 ## Running the project
 
+```
 Once the project is cloned, install the project dependencies using npm: 
   run the command- npm install
   
@@ -24,4 +25,4 @@ Once the dependencies are installed, you need to run all the micro front end app
     ng serve analytics -o
   Run the shell
     ng serve shell -o
-  
+ ```  
