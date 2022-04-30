@@ -62,11 +62,11 @@ In this part you will clone the project and inspect the various micro front end 
   
   ```
   
-  ```ng serve dashboard -o```
+    ng serve dashboard -o
   
-  ```ng serve fleet -o```
+    ng serve fleet -o
   
-  ```ng serve analytics -o```
+    ng serve analytics -o
   
   ```
     
