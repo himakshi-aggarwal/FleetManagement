@@ -17,7 +17,12 @@ export class VehicleListComponent implements OnInit {
   vehiclesListAll!: VehicleList[]
   selectedVehicles!: VehicleList[]
 
-  constructor(private readonly dialog: MatDialog) { }
+  constructor(private readonly dialog: MatDialog) {
+    window.addEventListener('eventFromMfe', (customEvent: CustomEvent) => {
+      const { detail } = customEvent || {}
+      this.vehiclesListAll.push(detail.vehicle)
+    })
+  }
 
   ngOnInit(): void {
     this.vehiclesListAll = getVehicleList()

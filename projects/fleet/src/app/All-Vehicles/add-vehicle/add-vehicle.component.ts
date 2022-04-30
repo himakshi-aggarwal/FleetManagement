@@ -31,7 +31,8 @@ export class AddVehicleComponent implements OnInit {
 
   onAddVehicle(): void {
     if (this.addCVehicleForm.valid) {
-      console.log(this.addCVehicleForm.value)
+      const customEvent = new CustomEvent('eventFromMfe', { detail: { vehicle: this.addCVehicleForm.value } })
+      window.dispatchEvent(customEvent);
       this.dialogRef.closeAll();
     }
 
