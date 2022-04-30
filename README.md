@@ -72,5 +72,9 @@ In this part you will clone the project and inspect the various micro front end 
     
     **Hint:** You might use three terminals for this
     
-5. After a browser window with the shell opened (``http://localhost:5000``), you will observe the ``Dashboard`` microfrontend is loaded in the shell. You can also try to click on ``Fleet``. This should load the fleet microfrontend into the shell:
+5. After a browser window with the shell opened (``http://localhost:5000``), you will observe the ``Dashboard`` microfrontend is loaded in the shell. You can also try to click on ``Fleet`` or ``Analytics``. This should load the microfrontend into the shell.
+
+6. Also, ensure yourself that the microfrontend applications are also running in standalone mode at http://localhost:3001 , http://localhost:3002 and http://localhost:3003
+
+Congratulations! You've successfully run the Module Federation project with Angular!
     
