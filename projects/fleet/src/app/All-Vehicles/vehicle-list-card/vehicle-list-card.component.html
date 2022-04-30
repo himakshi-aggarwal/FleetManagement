@@ -1,0 +1,31 @@
+<div
+  style="display: flex;justify-content: space-around;height: 5em; padding: 10px; border: 1px #bbb6b6 solid; border-radius:5px; margin: 10px;">
+
+  <div style="display: flex ;flex-direction: row;align-content: space-between; align-items: center;">
+    <div>
+      <img height="45" alt="" width="45" style="margin-right: 2px;" [src]="vehicleToDisplay.vehicleImagePath">
+    </div>
+
+    <div style="width:280px; font-weight: bold; margin-left: 10px;">{{vehicleToDisplay.name}}
+      <div style=" font-weight: normal;">{{vehicleToDisplay.id}}</div>
+    </div>
+
+    <div style="width:280px; ">{{vehicleToDisplay.type}}</div>
+
+    <div style="width:280px; ">
+      <div
+        style="display:flex; justify-content: center; width:140px ; border: 1px #bbb6b6 solid; border-radius: 4px; padding: 8px 8px">
+        <img height="20" width="20" [src]="vehicleIcon[vehicleToDisplay.status]" alt="">
+        {{vehicleToDisplay.status}}
+      </div>
+    </div>
+
+    <div style="width:280px;">
+      <!-- <div style="text-align: center;">{{vehicleToDisplay.health + '%'}}</div> -->
+      <!-- <div> -->
+      <ngb-progressbar [showValue]="true" height="22px" [type]="progressType" [value]="vehicleToDisplay.health">
+      </ngb-progressbar>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>

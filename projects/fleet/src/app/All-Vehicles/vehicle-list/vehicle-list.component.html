@@ -1,0 +1,23 @@
+<div class="cwidth">
+  <div class="header">
+    <div class="header__title">Vehicles</div>
+    <div class="header__buttons">
+      <div (click)="openDialog()">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        <strong style="margin-left: 5px">Add Vehicle</strong>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <mat-tab-group (selectedTabChange)="tabChanged($event)" animationDuration="0ms">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      <div style="display:inline-block; margin: 1.5em;" *ngFor="let head of VehicleTableHead">
+        <div style="text-align: center; width:280px">{{head}}</div>
+      </div>
+      <div *ngFor="let vehicle of selectedVehicles">
+        <app-vehicle-list-card [vehicleToDisplay]="vehicle"></app-vehicle-list-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

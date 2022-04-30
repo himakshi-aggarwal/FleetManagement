@@ -1,0 +1,48 @@
+<div>
+  <div>
+    <h2>Add Vehicle</h2>
+  </div>
+  <div>
+    <form [formGroup]="addCVehicleForm">
+      <mat-form-field class="full-width row">
+        <input matInput placeholder="Vehicle Name" formControlName="name" required>
+        <mat-error *ngIf="addCVehicleForm.controls['name'].hasError('required')">
+          Please enter Vehicle Name
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width row">
+        <input matInput placeholder="Vehicle ID" formControlName="id" required>
+        <mat-error *ngIf="addCVehicleForm.controls['id'].hasError('required')">
+          Please enter Vehicle ID
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Type" formControlName="type" required>
+        <mat-error *ngIf="addCVehicleForm.controls['type'].hasError('required')">
+          Please enter Vehicle Type
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Driver" formControlName="driver" required>
+        <mat-error *ngIf="addCVehicleForm.controls['driver'].hasError('required')">
+          Please enter Driver's Name
+        </mat-error>
+      </mat-form-field>
+
+      <div class="btn-sec">
+
+        <button mat-raised-button type="submit" class="update-btn" (click)="onAddVehicle()">
+          <fa-icon [icon]="faSave"></fa-icon><strong style="margin-left: 5px">Save</strong>
+        </button>
+
+        <button mat-raised-button type="button" class="cancel-btn" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

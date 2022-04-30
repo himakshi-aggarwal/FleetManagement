@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 30px;
+  margin-bottom: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.btn-sec{
+    text-align: center;
+}
+
+.update-btn{
+    background-color: #0D8A72;
+    color: white;
+    height: 2.5em;
+    border-radius: 4px;
+}
+
+.cancel-btn{
+    margin-left: 20px;
+    background-color: #cbc9c9;
+    height: 2.5em;
+    border-radius: 4px;
+}
