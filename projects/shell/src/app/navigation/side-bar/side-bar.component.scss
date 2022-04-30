@@ -1,3 +1,9 @@
+.scrollable-container {
+  overflow: auto;
+  height: 91vh;
+  display: block;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -74,4 +80,50 @@
   padding: 0;
   overflow: visible;
   background-color: unset;
+}
+
+.layout-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.main-container {
+  height: 91vh;
+  width: 14em;
+  background-color: white;
+}
+
+.main-container-fixed {
+  top: 56px;
+}
+
+.scrollable {
+  padding: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0em;
+  margin-top: 0em;
+}
+
+.color-icon {
+  color: #09756b;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #09756b;
+}
+
+a:hover {
+  transition: 1s;
+  color: #035b52;
 }

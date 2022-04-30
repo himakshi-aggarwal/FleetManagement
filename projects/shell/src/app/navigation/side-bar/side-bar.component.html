@@ -1,0 +1,23 @@
+<div class="scrollable-container">
+  <div class="layout-container ">
+    <div class="main-container main-container-fixed">
+      <div class="scrollable">
+        <div class="color-icon">
+          <a [routerLink]="['/dashboard']" routerLinkActive="active">
+            <fa-icon [icon]="faHome"></fa-icon><span style="padding-left: 0.5em">Home</span>
+          </a>
+        </div>
+        <div class="color-icon">
+          <a [routerLink]="['/vehicle-list']" routerLinkActive="active">
+            <fa-icon [icon]="faTruck"></fa-icon><span style="padding-left: 0.5em">Fleet</span>
+          </a>
+        </div>
+        <div class="color-icon">
+          <a [routerLink]="['/checks-lists']" routerLinkActive="active">
+            <fa-icon [icon]="faPieChart"></fa-icon><span style="padding-left: 0.5em">Analytics</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
