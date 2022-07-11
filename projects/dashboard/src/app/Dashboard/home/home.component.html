@@ -1,19 +1,46 @@
-<!-- <div>
-  <div style="display: flex;flex-direction: column;width: 40%; "> -->
-<div class="cwidth">
-  <div class="header">
-    <div class="header__title">
-      Active Vehicles
-    </div>
+<div>
+  <div style="font-size: 25px;padding: 10px;font-weight: 500;padding: 10px;background-color: white;">
+    Active Vehicles
   </div>
-  <hr style="width: 40%;">
-  <div style="width: 40%;">
-    <mat-tab-group (selectedTabChange)="tabChanged($event)" animationDuration="0ms">
-      <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
-        <div style="cursor: pointer;" (click)="getVehicleDetail()" *ngFor="let vehicle of selectedVehicles">
-          <app-vehicle-card [activeVehicles]="vehicle"></app-vehicle-card>
+  <div style="display: flex;flex-direction: column;width: 35%;">
+    <div style="display: flex;flex-direction: row;">
+      <div>
+        <mat-tab-group animationDuration="0ms" (selectedTabChange)="tabClick($event)">
+          <mat-tab label="All">
+            <div *ngFor="let vehicle of filteredVehicle">
+              <div class="vehicle-card" (click)="getVehicleDetail(vehicle)">
+                <app-vehicle-card [activeVehicles]="vehicle"></app-vehicle-card>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Driving">
+            <div *ngFor="let vehicle of filteredVehicle">
+              <div class="vehicle-card" (click)="getVehicleDetail(vehicle)">
+                <app-vehicle-card [activeVehicles]="vehicle"></app-vehicle-card>
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Parked">
+            <div *ngFor="let vehicle of filteredVehicle">
+              <div class="vehicle-card" (click)="getVehicleDetail(vehicle)">
+                <app-vehicle-card [activeVehicles]="vehicle"></app-vehicle-card>
+              </div>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+      <div style="padding-top: 49px;display: flex;">
+        <div *ngIf="isWindowClosed">
+          <app-vehicle-detail [vehicleD]="vehicleDetail" (closeWindow)="closeDetailWindow($event)"></app-vehicle-detail>
         </div>
-      </mat-tab>
-    </mat-tab-group>
+        <div>
+          <google-map height="570px" width="820px" [options]="options">
+            <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition.Marker"
+              [options]="{icon: { url:'https://maps.google.com/mapfiles/ms/icons/green-dot.png' }, zIndex: 100}">
+            </map-marker>
+          </google-map>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

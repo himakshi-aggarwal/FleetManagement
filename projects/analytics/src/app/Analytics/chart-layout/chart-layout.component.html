@@ -1,0 +1,133 @@
+<div>
+  <div style="font-size: 25px;padding: 10px;font-weight: 500;padding: 10px;background-color: white;">
+    Analytics
+  </div>
+  <div style="display: flex;justify-content: space-around;margin-top: 1em;margin-left: 0em;">
+    <div style="display: flex;justify-content: space-between;align-items: center;padding:0.5em;
+      background-color: white;border: 1px solid lightgray;height: 5em;width: 21em;">
+      <div>
+        <div style="font-size: 18px;">
+          <fa-icon [icon]="faInr"></fa-icon>
+          2,00,000
+        </div>
+        <div style="font-size: 12px;">Total Expenses</div>
+      </div>
+      <div style="
+        height: 52px;
+        width: 52px;
+        border: 0 solid #fff;
+        border-radius: 50%;
+        background-color: #ecf6f4;
+        border-right: 26px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+        overflow: visible">
+        <fa-icon class="btn-outline-success" style="position: absolute;
+        left: 33.3em;
+        top: 10.2em;" [icon]="faKeyboard"></fa-icon>
+      </div>
+    </div>
+    <div style="display: flex;justify-content: space-between;align-items: center;padding:0.5em;
+      background-color: white;border: 1px solid lightgray;height: 5em;width: 21em;">
+      <div>
+        <div style="font-size: 18px;">
+          <fa-icon [icon]="faInr"></fa-icon>
+          1,00,000
+        </div>
+        <div style="font-size: 12px;">Profit</div>
+      </div>
+      <div style="
+        height: 52px;
+        width: 52px;
+        border: 0 solid #fff;
+        border-radius: 50%;
+        background-color: #ecf6f4;
+        border-right: 26px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+        overflow: visible">
+        <fa-icon class="btn-outline-success" style="position: absolute;
+        left: 56.8em;
+        top: 10.2em;" [icon]="faMoney"></fa-icon>
+      </div>
+    </div>
+    <div style="display: flex;justify-content: space-between;align-items: center;padding:0.5em;
+      background-color: white;border: 1px solid lightgray;height: 5em;width: 21em;">
+      <div>
+        <div style="font-size: 18px;">
+          2,00,000H
+        </div>
+        <div style="font-size: 12px;">Labour Hours</div>
+      </div>
+      <div style="
+      height: 52px;
+      width: 52px;
+      border: 0 solid #fff;
+      border-radius: 50%;
+      background-color: #ecf6f4;
+      border-right: 26px;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      padding: 0;
+      overflow: visible">
+        <fa-icon class="btn-outline-success" style="position: absolute;
+      left: 80.6em;
+      top: 10.2em;" [icon]="faClock"></fa-icon>
+      </div>
+    </div>
+    <div style="display: flex;justify-content: space-between;align-items: center;padding:0.5em;
+      background-color: white;border: 1px solid lightgray;height: 5em;width: 21em;">
+      <div>
+        <div style="font-size: 18px;">
+          <fa-icon [icon]="faInr"></fa-icon>
+          2,00,000
+        </div>
+        <div style="font-size: 12px;">Revenue</div>
+      </div>
+      <div style="
+    height: 52px;
+    width: 52px;
+    border: 0 solid #fff;
+    border-radius: 50%;
+    background-color: #ecf6f4;
+    border-right: 26px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+    overflow: visible">
+        <fa-icon class="btn-outline-success" style="position: absolute;
+    left: 104.2em;
+    top: 10.2em;" [icon]="faCoins"></fa-icon>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex;justify-content: space-around;margin-top: 1em;margin-left: 0em;">
+    <div style="background-color: white;border: 1px solid lightgray;height: 30em;width: 55em;">
+      <div style="height: 4em;border-bottom: 1px solid lightgrey;padding: 1em;
+        font-size: 18px;
+        font-weight: 500;">
+        Revenue
+      </div>
+      <div>
+        <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
+      </div>
+    </div>
+    <div style="background-color: white;border: 1px solid lightgray;height: 30em;width: 35em;">
+      <div style="height: 4em;border-bottom: 1px solid lightgrey;padding: 1em;
+        font-size: 18px;
+        font-weight: 500;">
+        Expenses
+      </div>
+      <div style="padding-left: 15px;">
+        <plotly-plot [data]="donutGraph.data" [layout]="donutGraph.layout"></plotly-plot>
+      </div>
+    </div>
+  </div>
+
+</div>

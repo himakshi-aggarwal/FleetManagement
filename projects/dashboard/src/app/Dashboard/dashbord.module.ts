@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { GoogleMapsModule } from '@angular/google-maps';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -19,6 +20,7 @@ import { VehicleCardComponent } from './vehicle-card/vehicle-card.component';
         RouterModule.forChild(DASHBOARD_ROUTES),
         FontAwesomeModule,
         MatTabsModule,
+        GoogleMapsModule
     ],
 
 })

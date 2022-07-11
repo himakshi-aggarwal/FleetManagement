@@ -1,19 +1,4 @@
-.cwidth {
-  width: 1300px;
-  margin-left: 1em;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4px;
-  height: 3em;
-  width: 40%;
-}
-
-.header__title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: auto;
+.vehicle-card:hover {
+  cursor: pointer;
+  background-color: blue;
 }

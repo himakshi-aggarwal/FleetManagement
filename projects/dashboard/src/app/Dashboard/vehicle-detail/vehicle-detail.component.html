@@ -1,0 +1,83 @@
+<div style="width: 25em;background: #faf5f5;border-left: 1px solid lightgray;height: 40.5em;border-top: 1px solid lightgray;">
+  <div style="border-bottom: 1px solid lightgray;">
+    <div style="display: flex;justify-content: space-between;padding: 10px;">
+      <div>Trip Details</div>
+      <div style="cursor: pointer;">
+        <fa-icon (click)="closeDetailWindow(false)" [icon]="faXRay"></fa-icon>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-bottom: 1px solid lightgray;">
+    <div style="display: flex;justify-content: space-between;padding: 10px;">
+      <div style="display: flex;flex-direction: column;">
+        <div style="font-weight: 600;">{{vehicleD[0].vehicleNumber}}</div>
+        <div style="display: flex;">
+          <div style="padding-right: 10px">{{vehicleD[0].vehicleCode}}</div>
+          <div>{{vehicleD[0].vehicleState}}</div>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-danger">
+          <fa-icon [icon]="faExplanation"></fa-icon>
+          Errors
+        </button>
+        <!-- <button type="button" class="btn btn-outline-danger">ERRORS</button> -->
+      </div>
+    </div>
+  </div>
+  <div style="border-bottom: 1px solid lightgray">
+    <div style="display: flex;padding-top: 10px;">
+      <div style="padding-left: 10px;width: 14em;">
+        <p>
+          <fa-icon style="padding-right: 6px;" [icon]="faCalender"></fa-icon>Start Date
+        </p>
+        <p style="margin-top: -1em">{{vehicleD[0].vehicleInfo.startDate}}</p>
+      </div>
+      <div>
+        <p>
+          <fa-icon style="padding-right: 6px;" [icon]="faClock"></fa-icon>Duration
+        </p>
+        <p style="margin-top: -1em">{{vehicleD[0].vehicleInfo.duration}}</p>
+      </div>
+    </div>
+    <div style="display: flex;">
+      <div style="padding-left: 10px;width: 14em;">
+        <p>
+          <fa-icon style="padding-right: 6px;" [icon]="faTruck"></fa-icon>Distance Covered
+        </p>
+        <p style="margin-top: -1em">{{vehicleD[0].vehicleInfo.distanceCovered}}</p>
+      </div>
+      <div>
+        <p>
+          <fa-icon style="padding-right: 6px;" [icon]="faUser"></fa-icon>Driver
+        </p>
+        <p style="margin-top: -1em">{{vehicleD[0].vehicleInfo.driver}}</p>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex;flex-direction: column;padding-left: 10px;">
+    <div>
+      <p>Departure</p>
+      <p>
+        <fa-icon style="padding-right: 6px;" [icon]="faMarker"></fa-icon>{{vehicleD[0].vehicleJourney.place}}
+      </p>
+      <p>{{vehicleD[0].vehicleJourney.time}}</p>
+    </div>
+    <div>
+      <p>Stop</p>
+      <p>
+        <fa-icon style="padding-right: 6px;" [icon]="faMarker"></fa-icon>{{vehicleD[0].vehicleJourney.place}}
+      </p>
+      <p>{{vehicleD[0].vehicleJourney.time}}</p>
+    </div>
+    <div>
+      <p>Stop</p>
+      <p>
+        <fa-icon style="padding-right: 6px;" [icon]="faMarker"></fa-icon>{{vehicleD[0].vehicleJourney.place}}
+      </p>
+      <p>{{vehicleD[0].vehicleJourney.time}}</p>
+    </div>
+    
+  </div>
+</div>

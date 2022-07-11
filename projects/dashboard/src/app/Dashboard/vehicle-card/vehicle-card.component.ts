@@ -1,11 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {  faExclamationTriangle, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export interface ActiveVehicle {
   vehicleImagePath: string,
   vehicleNumber: string,
   vehicleDate: string,
-  status: string
+  type:string,
+  tab?:number,
+  error: boolean
 }
 
 @Component({
@@ -16,8 +18,9 @@ export interface ActiveVehicle {
 
 export class VehicleCardComponent implements OnInit {
 
-  @Input() public activeVehicles: ActiveVehicle = { vehicleDate: '', vehicleImagePath: '', vehicleNumber: '', status: '' };
+  @Input() public activeVehicles: ActiveVehicle = { vehicleDate: '', vehicleImagePath: '',type:'', vehicleNumber: '', error: false };
   faPaperPlane = faPaperPlane;
+  faExplanation = faExclamationTriangle;
   constructor() { }
 
   ngOnInit(): void {

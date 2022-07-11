@@ -1,6 +1,5 @@
-<div
-  style="display: flex;justify-content: space-around;height: 5em;padding: 10px; border: 1px #bbb6b6 solid; border-radius:5px; margin: 10px;">
-  <div style="display: flex ; align-items: center;">
+<div style="display: flex;justify-content: space-around;background: #faf5f5;height: 5.74em;padding-top: 20px;">
+  <div>
     <img height="45" alt="" width="45" [src]="activeVehicles.vehicleImagePath">
   </div>
   <div style="display: flex;flex-direction: column;align-content: space-between;">
@@ -9,10 +8,21 @@
   </div>
   <div>
     <div style="padding-top: 0.7em;">
-      <button class="btn bg-transparent" style="width: 5em;
-      padding: 4px;">
+      <button class="btn btn-light" style="width: 5em;
+      padding: 4px;"> Trip
         <fa-icon [icon]="faPaperPlane"></fa-icon>
       </button>
     </div>
+    <div *ngIf="activeVehicles.error" style="position: absolute;top: 24em;
+    right: 2.5em;" matTooltipClass="example-tooltip-red" matTooltip="Critical Fuel Level" matTooltipPosition="right"
+      aria-label="Button that displays a tooltip in various positions">
+      <fa-icon class="btn-outline-danger" [icon]="faExplanation"></fa-icon>
+    </div>
   </div>
+  <!-- <button  *ngIf="activeVehicles.error" mat-raised-button matTooltip="Info about the action"
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    <fa-icon [icon]="faExplanation"></fa-icon>
+  </button> -->
+
 </div>
+<div style="border-bottom: 1px solid lightgrey;"></div>
